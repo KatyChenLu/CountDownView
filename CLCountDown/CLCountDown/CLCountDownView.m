@@ -46,6 +46,16 @@
 
 @implementation CLCountDownView
 
++ (instancetype)allocCountDownWithTimeInterval:(NSTimeInterval)countDownTimeInterval themeColor:(UIColor *)themeColor textFont:(UIFont *)textFont colonColor:(UIColor *)colonColor countDownType:(CountDownType)countDownType {
+    CLCountDownView * view = [[CLCountDownView alloc] initWithFrame:CGRectZero];
+    view.countDownTimeInterval = countDownTimeInterval;
+    view.themeColor = themeColor;
+    view.textFont = textFont;
+    view.colonColor = colonColor;
+    view.countDownType = countDownType;
+    return view;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -180,7 +190,7 @@
         _colonsArray = @[colon0,colonOne,colonTwo,colonThird];
 
     }else{
-        _colonsArray = @[colon0,colonOne,colonTwo];
+        _colonsArray = @[colon0,colonOne,colonTwo,colonThird];
 
     }
     

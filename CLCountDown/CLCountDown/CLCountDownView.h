@@ -48,6 +48,11 @@ typedef NS_ENUM(NSUInteger, CountDownType) {
 
 - (void)stopCountDown;
 
++ (instancetype )allocCountDownWithTimeInterval:(NSTimeInterval )countDownTimeInterval
+                                              themeColor:(UIColor *_Nullable)themeColor
+                                                textFont:(UIFont *_Nullable)textFont
+                                              colonColor:(UIColor *_Nullable)colonColor
+                                           countDownType:(CountDownType)countDownType;
 
 @end
 

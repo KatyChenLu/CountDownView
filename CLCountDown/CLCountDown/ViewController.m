@@ -37,7 +37,7 @@
         
     }];
     UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"reset" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.countDownView.countDownTimeInterval = 10;
+        self.countDownView.countDownTimeInterval = 100;
     }];
     [aler addAction:cancelAction];
     [aler addAction:resetAction];
