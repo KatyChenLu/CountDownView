@@ -82,6 +82,7 @@
     _textFont = [UIFont systemFontOfSize:14.0];
     _recoderTimeIntervalDidInBackground = NO;
     _didRegisterNotificaton = NO;
+    _countDownType = CountDownUseChar;
     self.backgroundColor = [UIColor clearColor];
 }
 
@@ -154,7 +155,7 @@
     
     
     UILabel *colon0 = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth, 0, colonWidth, itemHeight)];
-    colon0.text = self.countDownType == CountDownUseChar? @"天" : @":";
+    colon0.text = (_countDownType == CountDownUseChar)? @"天" : @":";
     colon0.backgroundColor = [UIColor clearColor];
     colon0.textColor = _colonColor;
     colon0.font = _textFont;
@@ -162,7 +163,7 @@
     [self addSubview:colon0];
     
     UILabel *colonOne = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth + itemWidth + colonWidth, 0, colonWidth, itemHeight)];
-    colonOne.text = self.countDownType == CountDownUseChar? @"时" : @":";
+    colonOne.text = _countDownType == CountDownUseChar? @"时" : @":";
     colonOne.backgroundColor = [UIColor clearColor];
     colonOne.textColor = _colonColor;
     colonOne.font = _textFont;
@@ -170,7 +171,7 @@
     [self addSubview:colonOne];
     
     UILabel *colonTwo = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth + 2*itemWidth + 2*colonWidth, 0, colonWidth, itemHeight)];
-    colonTwo.text =  self.countDownType == CountDownUseChar? @"分" : @":";
+    colonTwo.text =  _countDownType == CountDownUseChar? @"分" : @":";
     colonTwo.backgroundColor = [UIColor clearColor];
     colonTwo.textColor = _colonColor;
     colonTwo.font = _textFont;
@@ -185,7 +186,7 @@
     colonThird.font = _textFont;
     colonThird.textAlignment = NSTextAlignmentCenter;
     
-    if (self.countDownType == CountDownUseChar) {
+    if (_countDownType == CountDownUseChar) {
         [self addSubview:colonThird];
         _colonsArray = @[colon0,colonOne,colonTwo,colonThird];
 
@@ -337,6 +338,11 @@
             }
         }
     }
+}
+- (void)setCountDownType:(CountDownType)countDownType {
+   
+        _countDownType = countDownType;
+    
 }
 
 - (void)setCountDownTimeInterval:(NSTimeInterval)countDownTimeInterval
