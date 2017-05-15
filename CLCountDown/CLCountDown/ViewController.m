@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "CLCountDownView.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<CLCountDownViewDelegate>
+@property (nonatomic)CLCountDownView *countDownView;
 @end
 
 @implementation ViewController
@@ -17,6 +18,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.countDownView =  [[CLCountDownView alloc] init];
+    
+     self.countDownView.frame = CGRectMake(0, 0, 200, 30);
+     self.countDownView.center = self.view.center;
+     self.countDownView.delegate = self;
+     self.countDownView.themeColor = [UIColor orangeColor];
+     self.countDownView.countDownTimeInterval = 100;
+    self.countDownView.countDownType = CountDownUseColon;
+    [self.view addSubview: self.countDownView];
+    
+    
+}
+- (void)countDownDidFinished {
+    UIAlertController  *aler = [UIAlertController alertControllerWithTitle:@"tip" message:@"CountDownOver!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"reset" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.countDownView.countDownTimeInterval = 10;
+    }];
+    [aler addAction:cancelAction];
+    [aler addAction:resetAction];
+    [self presentViewController:aler animated:YES completion:nil];
 }
 
 

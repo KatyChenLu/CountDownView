@@ -144,7 +144,7 @@
     
     
     UILabel *colon0 = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth, 0, colonWidth, itemHeight)];
-    colon0.text = @"天";
+    colon0.text = self.countDownType == CountDownUseChar? @"天" : @":";
     colon0.backgroundColor = [UIColor clearColor];
     colon0.textColor = _colonColor;
     colon0.font = _textFont;
@@ -152,7 +152,7 @@
     [self addSubview:colon0];
     
     UILabel *colonOne = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth + itemWidth + colonWidth, 0, colonWidth, itemHeight)];
-    colonOne.text = @"时";
+    colonOne.text = self.countDownType == CountDownUseChar? @"时" : @":";
     colonOne.backgroundColor = [UIColor clearColor];
     colonOne.textColor = _colonColor;
     colonOne.font = _textFont;
@@ -160,7 +160,7 @@
     [self addSubview:colonOne];
     
     UILabel *colonTwo = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth + 2*itemWidth + 2*colonWidth, 0, colonWidth, itemHeight)];
-    colonTwo.text = @"分";
+    colonTwo.text =  self.countDownType == CountDownUseChar? @"分" : @":";
     colonTwo.backgroundColor = [UIColor clearColor];
     colonTwo.textColor = _colonColor;
     colonTwo.font = _textFont;
@@ -169,16 +169,22 @@
     
     
     UILabel *colonThird = [[UILabel alloc] initWithFrame:CGRectMake(dayLabelWidth + 3*itemWidth + 3*colonWidth, 0, colonWidth, itemHeight)];
-    colonThird.text = @"秒";
+    colonThird.text =   @"秒" ;
     colonThird.backgroundColor = [UIColor clearColor];
     colonThird.textColor = _colonColor;
     colonThird.font = _textFont;
     colonThird.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:colonThird];
     
+    if (self.countDownType == CountDownUseChar) {
+        [self addSubview:colonThird];
+        _colonsArray = @[colon0,colonOne,colonTwo,colonThird];
+
+    }else{
+        _colonsArray = @[colon0,colonOne,colonTwo];
+
+    }
     
-    _colonsArray = @[colon0,colonOne,colonTwo,colonThird];
-    colon0 = nil;
+       colon0 = nil;
     colonOne = nil;
     colonTwo = nil;
     colonThird = nil;
