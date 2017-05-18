@@ -195,7 +195,7 @@
 
     }
     
-       colon0 = nil;
+    colon0 = nil;
     colonOne = nil;
     colonTwo = nil;
     colonThird = nil;
