@@ -192,7 +192,6 @@
 
     }else{
         _colonsArray = @[colon0,colonOne,colonTwo,colonThird];
-
     }
     
     colon0 = nil;
