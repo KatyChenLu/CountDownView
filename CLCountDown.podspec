@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   # 所遵守的协议，比如MIT或Apache等
   s.license          = 'MIT'
   # 作者信息哦
-  s.author           = { “lul” => "liuri@lemonsoft.net" }
+  s.author           = { “lul” => “630001384@qq.com” }
   # 项目托管地址，因为我的项目在github上，所以下面这么写
   s.source           = { :git => "https://github.com/KatyChenLu/CountDownView.git", :tag => s.version.to_s }
   # 最低支持的iOS版本
