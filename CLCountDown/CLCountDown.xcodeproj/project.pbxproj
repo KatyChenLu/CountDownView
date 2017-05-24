@@ -13,7 +13,7 @@
 		EC7631A41EC5B4CF00BC9655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7631A21EC5B4CF00BC9655 /* Main.storyboard */; };
 		EC7631A61EC5B4CF00BC9655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7631A51EC5B4CF00BC9655 /* Assets.xcassets */; };
 		EC7631A91EC5B4CF00BC9655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7631A71EC5B4CF00BC9655 /* LaunchScreen.storyboard */; };
-		EC7631B31EC5B4FD00BC9655 /* CLCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7631B21EC5B4FD00BC9655 /* CLCountDownView.m */; };
+		EC79C20E1ED58C3B00CDFA40 /* CLCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC79C20D1ED58C3B00CDFA40 /* CLCountDownView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		EC7631A51EC5B4CF00BC9655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC7631A81EC5B4CF00BC9655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC7631AA1EC5B4CF00BC9655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC7631B11EC5B4FD00BC9655 /* CLCountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCountDownView.h; sourceTree = "<group>"; };
-		EC7631B21EC5B4FD00BC9655 /* CLCountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCountDownView.m; sourceTree = "<group>"; };
+		EC79C20C1ED58C3B00CDFA40 /* CLCountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCountDownView.h; sourceTree = "<group>"; };
+		EC79C20D1ED58C3B00CDFA40 /* CLCountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCountDownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 		EC7631B01EC5B4ED00BC9655 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EC7631B11EC5B4FD00BC9655 /* CLCountDownView.h */,
-				EC7631B21EC5B4FD00BC9655 /* CLCountDownView.m */,
+				EC79C20C1ED58C3B00CDFA40 /* CLCountDownView.h */,
+				EC79C20D1ED58C3B00CDFA40 /* CLCountDownView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 				EC7631A11EC5B4CF00BC9655 /* ViewController.m in Sources */,
 				EC76319E1EC5B4CF00BC9655 /* AppDelegate.m in Sources */,
 				EC76319B1EC5B4CF00BC9655 /* main.m in Sources */,
-				EC7631B31EC5B4FD00BC9655 /* CLCountDownView.m in Sources */,
+				EC79C20E1ED58C3B00CDFA40 /* CLCountDownView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +325,7 @@
 				EC7631AF1EC5B4CF00BC9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
