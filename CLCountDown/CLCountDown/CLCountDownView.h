@@ -26,16 +26,16 @@ typedef NS_ENUM(NSUInteger, CountDownType) {
 @property (nonatomic, assign) NSTimeInterval countDownTimeInterval;
 
 // 倒计时文字的颜色
-@property (nonatomic) UIColor * _Nullable textColor;
+@property (nonatomic) UIColor *  textColor;
 
 // 倒计时label的背景色
-@property (nonatomic) UIColor * _Nullable themeColor;
+@property (nonatomic) UIColor *  themeColor;
 
 // 显示时间的冒号的字体颜色
-@property (nonatomic) UIColor * _Nullable colonColor;
+@property (nonatomic) UIColor *  colonColor;
 
 // 倒计时label的字体
-@property (nonatomic) UIFont * _Nullable textFont;
+@property (nonatomic) UIFont *  textFont;
 
 @property (nonatomic, weak) id <CLCountDownViewDelegate> delegate;
 
