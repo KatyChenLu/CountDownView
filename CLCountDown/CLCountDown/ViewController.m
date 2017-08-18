@@ -21,11 +21,11 @@
     
     self.countDownView =  [[CLCountDownView alloc] init];
     
-     self.countDownView.frame = CGRectMake(0, 0, 200, 30);
-     self.countDownView.center = self.view.center;
-     self.countDownView.delegate = self;
-     self.countDownView.themeColor = [UIColor orangeColor];
-     self.countDownView.countDownTimeInterval = 100;
+    self.countDownView.frame = CGRectMake(0, 0, 200, 30);
+    self.countDownView.center = self.view.center;
+    self.countDownView.delegate = self;
+    self.countDownView.themeColor = [UIColor orangeColor];
+    self.countDownView.countDownTimeInterval = 100;
     self.countDownView.countDownType = CountDownUseColon;
     [self.view addSubview: self.countDownView];
     
